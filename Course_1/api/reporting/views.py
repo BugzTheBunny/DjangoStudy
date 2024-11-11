@@ -1,14 +1,8 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
 from rest_framework import viewsets
 
 from reporting.serializers import OrderSerializer
 from reporting.models import Order
 
-class ReportingViewSet(APIView):
-    def get(self, request):
-        answer = {'id': "42", 'name': "question"}
-        return Response(answer)
     
 
 class OrderViewSet(viewsets.ModelViewSet):
