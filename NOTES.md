@@ -11,9 +11,10 @@
 - `python manage.py shell` - to get an interactive shell.
 - `python manage.py loaddata` - this is used to load data, for example for seeding data, it will look for `json`/`xml`/`yml` files inside of `fixtures` folders, inside of apps folders.
 
-# General 
+# General Django 
 - ## General Info
-    - `djangorestframework` when using    
+    - `djangorestframework` - To use django as a RESTApi.
+    - `django-cors-headers` - Solves CORS issues.
 - ## Apps
     - New apps / plugins (for example `DRF`) should be registered to `settings.py` inside `INSTALLED_APPS`
     - New `views` are added to `views.py` of the app, example:
@@ -107,3 +108,18 @@
         path('', include(router.urls))
     ]
     ```
+- ## Settings
+    - Allows hosts - `ALLOWED_HOSTS = ["*"]`
+    - Allows All Cors - `CORS_ORIGIN_ALLOW_ALL = True`
+# General VUE
+- Instead of installing VUE using CLI (if you don't want to run `npm install -g @vue/cli`) you can use `NPX` to directly run the commands : `npx -p @vue/cli vue create <name>`
+- `npm run serve` to start the server.
+- `npm install axios` - to install `axios`
+
+
+- ## Hooks (Composition API)
+- `setup(){}` - When using composition API, view it as an entrypoint for the component.
+- `onMounted()` hook in Vue's Composition API is a lifecycle hook that gets called after the component is fully mounted (i.e., added to the DOM). It is equivalent to the mounted lifecycle method in the Options API.
+
+- ## Functions
+- `ref()` is a reactive reference used to manage state within the Composition API. It allows you to create reactive variables that Vue can automatically track for changes. When the value inside a ref changes, Vue will automatically update any parts of the DOM or other computations that depend on that value.
