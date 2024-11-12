@@ -50,8 +50,8 @@ class Product(models.Model):
 
 class Order(models.Model):
     
-    order_date = models.DateField()
-    required_date = models.DateField()
+    order_date = models.DateTimeField()
+    required_date = models.DateTimeField()
     shipped_name = models.CharField(max_length=100)
     shipped_address = models.CharField(max_length=100)
     shipped_postal_code = models.CharField(max_length=100)
