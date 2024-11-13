@@ -123,3 +123,17 @@
 
 - ## Functions
 - `ref()` is a reactive reference used to manage state within the Composition API. It allows you to create reactive variables that Vue can automatically track for changes. When the value inside a ref changes, Vue will automatically update any parts of the DOM or other computations that depend on that value.
+
+- ## SASS / SCSS
+- This is how you add scss to the project (create `/styles/main.scss`):  
+    `vue.config.js`
+    ```
+      css: {
+        loaderOptions: {
+            sass: {
+                additionalData: `@import "~@/styles/main.scss";`,
+                }
+            }
+        },
+
+    ```

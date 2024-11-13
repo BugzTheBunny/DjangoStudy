@@ -8,15 +8,25 @@
             <nav>
                 <section class="nav-section">
                     <div class="section-title">DASHBOARDS</div>
+
                     <section>
                         <a href="#">
                             <span>Reporting</span>
+                        </a>
                             <div class="subs">
                                 <router-link :to="{name: 'orders'}">Orders</router-link>
                                 <router-link :to="{name: 'products'}">Products</router-link>
                                 <router-link :to="{name: 'suppliers'}">Suppliers</router-link>
                             </div>
+                    </section>
+
+                    <section>
+                        <a href="#">
+                            <span>Relations</span>
                         </a>
+                        <div class="subs">
+                                <router-link :to="{name: 'customers'}">Customers</router-link>
+                        </div>
                     </section>
                 </section>
             </nav>
