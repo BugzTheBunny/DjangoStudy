@@ -1,11 +1,33 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import OrdersView from '@/views/reporting/screens/OrdersView.vue'
+import ProductView from '@/views/reporting/screens/ProductView.vue'
+import SupplierView from '@/views/reporting/screens/SupplierView.vue'
+import DashboardView from '@/views/DashboardView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'dashboard',
+    component: DashboardView,
+
+    children: [
+      {
+        path: '/orders',
+        name: 'orders',
+        component: OrdersView
+      },
+      {
+        path: '/products',
+        name: 'products',
+        component: ProductView
+      },
+      {
+        path: '/suppliers',
+        name: 'suppliers',
+        component: SupplierView
+      }
+    ]
   },
 ]
 
