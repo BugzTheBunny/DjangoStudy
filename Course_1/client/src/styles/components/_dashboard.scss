@@ -77,13 +77,13 @@
                         }
                         
                         &:hover {
-                            background-color: aqua;
+                            background-color: $color-hover-1;
                         }
                     }
 
                     > .subs {
-                        opacity: 1;
-                        max-height: 10;
+                        opacity: 0;
+                        max-height: 0;
                         pointer-events: none;
                         transition: max-height .3s;
 
@@ -103,7 +103,35 @@
 
                             line-clamp: 2;
                             
-                            flex-direction: column;
+                            // flex-direction: column;
+
+                            &:link {
+                                text-decoration: none;
+                            }
+
+                            &:hover {
+                                opacity: 1;
+                                background-color: $color-1;
+                            }
+                        }
+                    }
+                    &.is-toggled {
+                        > a {
+                            color: $color-1;
+                            opacity: 1;
+                            transform: none;
+                            transition: ease .3s;
+                        
+                            > .menuToggle {
+                                transform: rotate(100deg);
+                                transition: ease .2s;
+                            }
+                        }
+
+                        > .subs {
+                            opacity: 1;
+                            max-height: 500px;
+                            pointer-events: all;
                         }
                     }
                 }
